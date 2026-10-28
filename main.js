@@ -74,7 +74,7 @@
 
   $('heroForm').addEventListener('submit',function(e){
     e.preventDefault();if(!validate(this))return;
-    var msg='السلام عليكم، أرغب في متابعة مجانية لمطالبة تأمين.\n'+lines([
+    var msg='السلام عليكم، أرغب في متابعة لمطالبة تأمين.\n'+lines([
       ['الاسم',$('h-name').value.trim()],['الجوال',$('h-phone').value.trim()],['نوع المطالبة',$('h-type').value],['وصف الحادث',$('h-desc').value.trim()]]);
     showReady($('quoteForm'),$('quoteReady'),this,msg);
   });
