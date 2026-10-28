@@ -75,14 +75,14 @@
   $('heroForm').addEventListener('submit',function(e){
     e.preventDefault();if(!validate(this))return;
     var msg='السلام عليكم، أرغب في متابعة لمطالبة تأمين.\n'+lines([
-      ['الاسم',$('h-name').value.trim()],['الجوال',$('h-phone').value.trim()],['نوع المطالبة',$('h-type').value],['وصف الحادث',$('h-desc').value.trim()]]);
+      ['الاسم',$('h-name').value.trim()],['الجوال',$('h-phone').value.trim()],['نوع المطالبة',$('h-type').value],['وصف',$('h-desc').value.trim()]]);
     showReady($('quoteForm'),$('quoteReady'),this,msg);
   });
   $('claimForm').addEventListener('submit',function(e){
     e.preventDefault();if(!validate(this))return;
     var msg='السلام عليكم، أرغب في رفع مطالبة تأمين.\n'+lines([
       ['الاسم',$('c-name').value.trim()],['الجوال',$('c-phone').value.trim()],
-      ['نوع المطالبة',$('c-type').value],['وصف الحادث',$('c-desc').value.trim()]]);
+      ['نوع المطالبة',$('c-type').value],['وصف',$('c-desc').value.trim()]]);
     showReady($('claimFormWrap'),$('claimReady'),this,msg);
   });
 
