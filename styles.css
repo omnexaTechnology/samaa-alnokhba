@@ -243,7 +243,7 @@ footer{margin-top:96px;background:var(--g900);color:var(--g100)}
 .foot p{margin-top:16px;font-size:14.5px;max-width:38ch}
 .foot h3{color:#fff;font-size:15.5px;font-weight:600;margin-bottom:14px}
 .foot ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:14.5px}
-.foot ul a:hover{color:#fff}
+.foot ul a:hover,.foot-bottom a:hover{color:#fff}
 .contact li{display:flex;align-items:center;gap:10px}
 .contact .icon{color:var(--g200);font-size:17px}
 .contact .ltr{direction:ltr;unicode-bidi:isolate;user-select:all}
