@@ -7,10 +7,12 @@ Forms hand off to WhatsApp (`wa.me/966567852320`); there is no backend.
 
 ```
 index.html        page markup, inline SVG icon sprite + logo
+privacy.html      privacy policy (/privacy, linked from footer)
 styles.css        all styles (green brand palette tokens at the top)
 main.js           services list, form validation, WhatsApp hand-off, mobile menu
 vercel.json       clean URLs, cache + security headers
 robots.txt
+sitemap.xml       add new pages here; submitted in Google Search Console
 assets/
   hero.webp           hero background (desktop)
   hero-mobile.webp    hero background (≤920px)
@@ -42,9 +44,8 @@ vercel          # preview
 vercel --prod   # production
 ```
 
-## After connecting a domain
-- Make `og:image` absolute in `index.html` (e.g. `https://yourdomain.com/assets/og.jpg`) — WhatsApp/Facebook previews need an absolute URL.
-- Optionally add `og:url` and a `sitemap.xml`.
+## Domain
+Live at `https://www.nj113.com` (bare `nj113.com` redirects to `www`). Canonical, `og:url`, `og:image` and `sitemap.xml` use the full `www` URL — update them if the domain changes.
 
 ## Editing content
 - Claim types (cards + form dropdowns + footer list): `CLAIMS` array in `main.js`.
