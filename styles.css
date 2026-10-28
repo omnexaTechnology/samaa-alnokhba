@@ -350,8 +350,6 @@ footer{margin-top:96px;background:var(--g900);color:var(--g100)}
 .ghost{flex:1;border:1px solid var(--line);background:var(--surface);border-radius:var(--r-sm);padding:11px 14px;font-weight:500;cursor:pointer;color:var(--ink)}
 .ghost:hover{border-color:var(--g300)}
 
-.foot{grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr))}
-
 @media (max-width:920px){
   .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .claim{grid-template-columns:minmax(0,1fr)}

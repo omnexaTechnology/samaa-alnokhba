@@ -56,7 +56,7 @@
     host.innerHTML='<div class="wa-ready"><h3>'+use('i-check')+'رسالتك جاهزة</h3>'+
       '<p>فتحنا لك واتساب برسالة جاهزة، أرسلها ثم أرفق الصور والمستندات داخل المحادثة. إذا لم يُفتح واتساب تلقائياً اضغط الزر.</p>'+
       '<div class="wa-preview" tabindex="0">'+esc(msg)+'</div>'+
-      '<div class="wa-actions"><a class="wa-btn" href="'+waUrl(msg)+'" target="_blank" rel="noopener">'+use('i-chat')+'فتح واتساب وإرسال</a>'+
+      '<div class="wa-actions"><a class="wa-btn" href="'+waUrl(msg)+'" target="_blank" rel="noopener">'+use('i-whatsapp')+'فتح واتساب وإرسال</a>'+
       '<button type="button" class="ghost" data-act="copy">نسخ الرسالة</button>'+
       '<button type="button" class="ghost" data-act="back">تعديل البيانات</button></div></div>';
     wrap.hidden=true;host.hidden=false;
