@@ -51,6 +51,10 @@
 
   // WhatsApp hand-off: opens wa.me with the prepared message and shows it as a fallback.
   function waUrl(msg){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(msg);}
+  // GA4 conversion via GTM. No personal data in the event, only where the lead came from.
+  function lead(src){(window.dataLayer=window.dataLayer||[]).push({event:'whatsapp_lead',lead_source:src});}
+  // Plain wa.me links. The .wa-btn fallback is skipped: its form submit was already counted.
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href*="wa.me"]');if(a&&!a.classList.contains('wa-btn'))lead('link');});
   function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function showReady(wrap,host,form,msg){
     host.innerHTML='<div class="wa-ready"><h3>'+use('i-check')+'رسالتك جاهزة</h3>'+
@@ -60,6 +64,7 @@
       '<button type="button" class="ghost" data-act="copy">نسخ الرسالة</button>'+
       '<button type="button" class="ghost" data-act="back">تعديل البيانات</button></div></div>';
     wrap.hidden=true;host.hidden=false;
+    lead(form.id);
     // Open WhatsApp right away; if the browser blocks the popup, the button in the panel still works.
     window.open(waUrl(msg),'_blank');
     host.onclick=function(e){
